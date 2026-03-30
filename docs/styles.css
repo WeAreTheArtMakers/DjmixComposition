@@ -44,6 +44,45 @@ a {
   padding: 24px 20px 72px;
 }
 
+.download-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 174, 66, 0.18);
+  background:
+    radial-gradient(620px 200px at 0% 50%, rgba(255, 174, 66, 0.1), transparent 62%),
+    linear-gradient(180deg, rgba(24, 29, 38, 0.9), rgba(16, 20, 27, 0.88));
+  box-shadow: var(--shadow);
+}
+
+.download-copy {
+  display: grid;
+  gap: 6px;
+}
+
+.download-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: #ffd8a5;
+}
+
+.download-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.download-meta {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -258,6 +297,7 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .shot figcaption {
@@ -369,9 +409,35 @@ th {
 
 .mono {
   font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.stacked-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.signal-label {
+  color: #ffd8a5;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.signal-value {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 1024px) {
+  .download-banner,
   .hero-grid,
   .two-up,
   .three-up,
@@ -379,6 +445,10 @@ th {
   .manual-links,
   .flow {
     grid-template-columns: 1fr;
+  }
+
+  .download-banner {
+    align-items: flex-start;
   }
 
   .flow-step::after {
