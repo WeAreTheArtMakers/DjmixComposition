@@ -73,23 +73,28 @@ Documentation site and manual pages:
 - `docs/export-studio-manual.html`
 - `docs/licensing.html`
 
-### 1. Library
+All screenshots below are captured from the actual modDJs Studio application interface.
 
-The Library is where the project starts.
-Tracks are imported, grouped, reviewed, and prepared for analysis.
+### 1. Track Pool And Builder Shell
 
-What this workspace is for:
+The left track pool and builder shell are where the project starts.
+This is the part of the app that keeps the set grounded in real sources before arrangement and export decisions take over.
+
+What this area is for:
 
 - drag-and-drop import
 - crate-style pool management
 - duplicate handling
 - relink support for moved files
-- a fast overview of what is analyzed and what still needs work
+- duration targeting and preset selection
+- one-click rebuild actions once the pool is ready
 
-![Library Workspace](./screenshots/library-workspace.png)
+<img src="./screenshots/library-track-pool.png" alt="modDJs track pool" width="360" />
+
+![Set Builder Workspace](./screenshots/set-builder-workspace.png)
 
 Why it matters:
-This keeps the app focused on real source management instead of a temporary playlist mentality.
+It keeps modDJs focused on project-based set construction instead of a temporary playlist mentality.
 
 ### 2. Transition Editor
 
@@ -121,35 +126,10 @@ What this workspace is for:
 - compare before and after master
 - export history and output reveal
 
-![Export Progress](./screenshots/export-studio-progress.png)
+![Export Studio](./screenshots/export-studio-workspace.png)
 
 The export stage is designed to feel like the final print step of a studio tool, not a rough bounce.
-
-![Export Compare](./screenshots/export-studio-compare.png)
-
-The compare view is meant to answer a practical question:
-what changed between the raw timeline render and the final delivered file?
-
-![Export History](./screenshots/export-studio-history.png)
-
-History keeps a clear record of what was rendered, where it went, and what mastering result came out of the pass.
-
-### 4. Timeline Preview
-
-Timeline Preview is where structure and pacing become visible.
-
-What this workspace is for:
-
-- arrangement-first sequencing
-- segment pool visibility
-- overlap timing
-- long-form flow control
-- seeing how source material is reused across the set
-
-![Timeline Preview](./screenshots/timeline-preview-workspace.png)
-
-Why it matters:
-The goal is to make the set readable as a composition, not just a list of filenames.
+It is the point where timeline logic, mastering choices, and delivery settings become one controlled final print.
 
 ## Core Strengths
 
