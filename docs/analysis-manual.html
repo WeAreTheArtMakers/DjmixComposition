@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modDJs Manual | Analysis Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="brand"><img class="brand-mark" src="./moddjs-mark.svg" alt="modDJs" /><span>Analysis Engine</span></div>
+        <div class="nav-row"><a class="btn ghost" href="./index.html">Docs Home</a><a class="btn ghost" href="./transition-editor-manual.html">Transition Editor</a></div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="panel">
+          <p class="kicker">Club Intelligence</p>
+          <h1>The differentiator is analysis depth, not skin.</h1>
+          <p class="lead">modDJs is designed to decide whether one section can be woven into another. That requires more than track-level BPM and key. The engine now reasons at phrase level.</p>
+          <div class="section chip-row">
+            <span class="chip active">Phrase fingerprints</span>
+            <span class="chip active">Tonal stability</span>
+            <span class="chip active">Texture motion</span>
+            <span class="chip active">Recall score</span>
+            <span class="chip">Kick conflict</span>
+            <span class="chip">Vocal density</span>
+          </div>
+        </article>
+        <aside class="panel soft">
+          <h2>What is fingerprinted per phrase</h2>
+          <ul class="list">
+            <li>Local BPM hint and rhythmic confidence</li>
+            <li>Key hint and tonal stability</li>
+            <li>Energy, vocal density, instrumental ratio</li>
+            <li>Transition friendliness and texture score</li>
+            <li>Spectral fingerprint and timbral signature</li>
+            <li>Club recall score for re-entry or handoff use</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section two-up">
+        <article class="panel">
+          <h2>How modDJs decides that a slice is worth reusing</h2>
+          <ol class="ordered">
+            <li>Find phrase markers with stable rhythm and enough section identity.</li>
+            <li>Score tonal lock so recall slices do not destabilize harmonic flow.</li>
+            <li>Estimate texture motion and energy contour to avoid dead repeats.</li>
+            <li>Use transition friendliness and instrumental space to rank handoff candidates.</li>
+            <li>Combine this into a club recall score per phrase, not just per track.</li>
+          </ol>
+          <p class="note">This is what enables patterns like minute 1 from one source, bar-tight bridge from another, and later re-entry from an earlier phrase without it sounding arbitrary.</p>
+        </article>
+        <article class="panel">
+          <figure class="shot">
+            <img src="../screenshots/transition-editor-workspace.png" alt="Transition editor screenshot" />
+            <figcaption>The Transition Editor becomes more useful once the analysis layer has already identified which sections are recall-safe.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="section panel soft">
+        <h2>Analysis metrics reference</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Metric</th><th>Meaning</th><th>Why it matters</th></tr></thead>
+            <tbody>
+              <tr><td>Tonal Stability</td><td>How stable pitch center and harmonic content remain across the phrase.</td><td>Higher values are safer for recall and long overlap.</td></tr>
+              <tr><td>Rhythm Confidence</td><td>How confidently the engine can align bars and pulse.</td><td>Prevents awkward phrase shifts and loose section drops.</td></tr>
+              <tr><td>Texture Score</td><td>How much spectral/timbral motion the phrase contains.</td><td>Useful when choosing whether a slice should energize or calm a transition.</td></tr>
+              <tr><td>Club Recall Score</td><td>Composite score for reuse in another part of the set.</td><td>Helps identify intro, bridge, drop, or breakdown material worth recalling later.</td></tr>
+              <tr><td>Instrumental Ratio</td><td>How much non-vocal space the phrase provides.</td><td>Important for clean layered handoffs.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">Next: open <a href="./transition-editor-manual.html">Transition Editor</a> to see how these scores become overlaps, recalls, and style choices.</footer>
+    </main>
+  </body>
+</html>

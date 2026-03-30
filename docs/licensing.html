@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modDJs Manual | Licensing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="brand"><img class="brand-mark" src="./moddjs-mark.svg" alt="modDJs" /><span>Licensing</span></div>
+        <div class="nav-row"><a class="btn ghost" href="./index.html">Docs Home</a><a class="btn ghost" href="../README.md">Public Overview</a></div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="panel">
+          <p class="kicker">Activation Path</p>
+          <h1>Trial first, signed activation after payment confirmation.</h1>
+          <p class="lead">The desktop app starts with 5 full set exports. After that, the intended production flow is device-bound activation using a payment intent, chain confirmation, and a signed activation token.</p>
+        </article>
+        <aside class="panel soft">
+          <div class="metric-grid">
+            <article class="metric"><span class="label">Trial</span><span class="value">5</span></article>
+            <article class="metric"><span class="label">License</span><span class="value">$99</span></article>
+          </div>
+          <div class="section">
+            <p class="lead mono">BNB: 0xc66aC8bcF729a6398bc879B7454B13983220601e</p>
+            <p class="lead mono">IBAN contact: studiobrn@gmail.com</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section panel">
+        <h2>Planned production flow</h2>
+        <div class="flow">
+          <div class="flow-step"><strong>Device ID</strong><span>The app creates or reads a stable device identifier.</span></div>
+          <div class="flow-step"><strong>Payment Intent</strong><span>Backend locks a BNB/USD quote for the one-time license.</span></div>
+          <div class="flow-step"><strong>Transaction</strong><span>User sends BNB to the configured wallet and submits the tx hash.</span></div>
+          <div class="flow-step"><strong>Watcher</strong><span>Backend reconciles confirmations and amount before issuing activation.</span></div>
+          <div class="flow-step"><strong>Signed Token</strong><span>Backend returns a signed activation token bound to the device.</span></div>
+        </div>
+      </section>
+
+      <section class="section panel soft">
+        <h2>Operator notes</h2>
+        <ul class="list">
+          <li>Keep the signing secret off the public surface.</li>
+          <li>Do not expose source code or admin tooling in the public repository.</li>
+          <li>Use separate public and private repositories.</li>
+          <li>Back the activation service with a persistent database before shipping volume.</li>
+          <li>Add replay protection and rate limiting before production traffic.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">The public repository should explain the product and workflow. The private repository should keep the code, signing logic, and release engineering.</footer>
+    </main>
+  </body>
+</html>

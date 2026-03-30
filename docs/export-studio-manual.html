@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modDJs Manual | Export Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="brand"><img class="brand-mark" src="./moddjs-mark.svg" alt="modDJs" /><span>Export Studio</span></div>
+        <div class="nav-row"><a class="btn ghost" href="./index.html">Docs Home</a><a class="btn ghost" href="./licensing.html">Licensing</a></div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="panel">
+          <p class="kicker">Final Print</p>
+          <h1>Export is treated as a studio phase, not a blind bounce.</h1>
+          <p class="lead">Export Studio exposes render phases, ETA, subtask state, mastering metrics, compare views, and output paths. It is meant to tell you exactly what is happening when the mix becomes a deliverable file.</p>
+        </article>
+        <aside class="panel soft">
+          <ul class="list">
+            <li>WAV, MP3, FLAC export targets</li>
+            <li>Master chain and loudness target controls</li>
+            <li>Reveal output path and export history</li>
+            <li>Before/after compare metrics and preview clips</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section two-up">
+        <article class="panel">
+          <figure class="shot">
+            <img src="../screenshots/export-studio-progress.png" alt="Export progress" />
+            <figcaption>Export progress stays readable through phase names, ETA, current subtask, and animated stage cues.</figcaption>
+          </figure>
+        </article>
+        <article class="panel">
+          <figure class="shot">
+            <img src="../screenshots/export-studio-compare.png" alt="Export compare" />
+            <figcaption>Compare view shows the difference between raw timeline print and final mastered export.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="section panel soft">
+        <h2>Export controls reference</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Control</th><th>Purpose</th><th>Operator note</th></tr></thead>
+            <tbody>
+              <tr><td>Format</td><td>Select WAV, MP3, or FLAC output.</td><td>Use WAV for archive/master, MP3 for fast delivery.</td></tr>
+              <tr><td>Profile</td><td>Choose low-impact, balanced, or high-quality render profile.</td><td>Use low-impact if desktop load matters more than speed parity.</td></tr>
+              <tr><td>Loudness Target</td><td>Sets target LUFS for final pass.</td><td>Use more conservative values if club systems already add pressure.</td></tr>
+              <tr><td>Reveal</td><td>Opens Finder or Explorer at the saved output path.</td><td>Use after every successful print to verify the actual artifact.</td></tr>
+              <tr><td>A/B Compare</td><td>Lets you hear and measure before vs after mastering.</td><td>Useful for checking whether the chain solved a problem or created one.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section panel">
+        <h2>Release discipline</h2>
+        <ul class="list">
+          <li>Do not publish a release unless Apple Silicon smoke, Windows smoke, and mac Intel compatibility smoke are green.</li>
+          <li>Keep 10, 30, and 60 minute native export benchmarks inside the release gate.</li>
+          <li>Use low disk preflight and relink smoke as blockers, not optional checks.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">Next: open <a href="./licensing.html">Licensing</a> for device-bound activation and payment intent flow.</footer>
+    </main>
+  </body>
+</html>

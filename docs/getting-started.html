@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modDJs Manual | Getting Started</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="brand"><img class="brand-mark" src="./moddjs-mark.svg" alt="modDJs" /><span>Getting Started</span></div>
+        <div class="nav-row">
+          <a class="btn ghost" href="./index.html">Docs Home</a>
+          <a class="btn ghost" href="./workspaces.html">Workspace Manual</a>
+        </div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="panel">
+          <p class="kicker">Session 01</p>
+          <h1>From first import to finished export.</h1>
+          <p class="lead">The shortest reliable path through modDJs is import, analyze, build, preview, export. This page is the practical first-session route.</p>
+          <ol class="section ordered">
+            <li>Open the app and create a new project.</li>
+            <li>Use <strong>Files</strong> or <strong>Folder</strong> to import audio.</li>
+            <li>Wait for analysis badges to populate BPM, key, phrasing, and energy.</li>
+            <li>Choose a target duration and preset in Set Builder.</li>
+            <li>Press <strong>Build</strong> to generate the first arrangement.</li>
+            <li>Open Timeline or Transition Editor to refine the result.</li>
+            <li>Open Export Studio, choose format and mastering settings, then print the set.</li>
+          </ol>
+        </article>
+        <aside class="panel soft">
+          <p class="kicker">First build checklist</p>
+          <ul class="list">
+            <li>Use tracks that already share a broad style family for the first pass.</li>
+            <li>If the set feels too linear, switch section mix mode to <strong>section-driven</strong> or <strong>club-edit</strong>.</li>
+            <li>For tighter club pacing, lower preserve-full-tracks and raise section creativity.</li>
+            <li>If files move on disk, use relink before editing transitions.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section two-up">
+        <article class="panel">
+          <h2>Top bar actions</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Control</th><th>What it does</th><th>When to use it</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Files</td><td>Opens file picker for one or more audio files.</td><td>Quick import from a known folder.</td></tr>
+                <tr><td>Folder</td><td>Imports recursively from a folder.</td><td>Useful when building a project from a crate or project directory.</td></tr>
+                <tr><td>Analyze</td><td>Runs or reruns analysis across the current track pool.</td><td>After import, after relink, or after manual marker changes.</td></tr>
+                <tr><td>Build</td><td>Generates a new arrangement and transition plan from current settings.</td><td>Whenever duration, energy, or transition policy changes.</td></tr>
+                <tr><td>Preview</td><td>Starts timeline-aware playback or transition audition from the current context.</td><td>Use before export to verify pacing and overlap quality.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="panel">
+          <h2>What a good first project looks like</h2>
+          <ul class="list">
+            <li>6 to 12 tracks with roughly compatible groove and emotional direction.</li>
+            <li>Most tracks analyzed successfully with visible key/BPM confidence.</li>
+            <li>A target duration close to what the pool can realistically hold.</li>
+            <li>Transition smoothness around the middle before pushing into more aggressive edits.</li>
+            <li>Export profile left on <strong>balanced</strong> unless you specifically need low-impact rendering.</li>
+          </ul>
+          <figure class="shot">
+            <img src="../screenshots/library-workspace.png" alt="Library workspace" />
+            <figcaption>Start in Library, not Timeline. The cleaner the pool, the cleaner the build pass.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="section panel soft">
+        <p class="kicker">Suggested first run</p>
+        <div class="flow">
+          <div class="flow-step"><strong>Warm-up</strong><span>Import 6-10 tracks with stable style adjacency.</span></div>
+          <div class="flow-step"><strong>Analyze</strong><span>Let phrase fingerprints and confidence values populate.</span></div>
+          <div class="flow-step"><strong>Build</strong><span>Use Smooth Journey or Deep Hypnotic for the first pass.</span></div>
+          <div class="flow-step"><strong>Refine</strong><span>Open Transition Editor to adjust weak pairs and recall placements.</span></div>
+          <div class="flow-step"><strong>Print</strong><span>Export one continuous master and verify compare metrics.</span></div>
+        </div>
+      </section>
+
+      <footer class="footer">Next: open <a href="./workspaces.html">Workspace Manual</a> for a full view-by-view breakdown.</footer>
+    </main>
+  </body>
+</html>
